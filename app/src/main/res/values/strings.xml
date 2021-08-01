@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Leo Chat</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="mail_address">Mail Address</string>
+    <string name="have_an_account_log_in"><u>Have an account? | Log in</u></string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="not_have_an_account_sign_up"><u>Not have an account? | sign up</u></string>
+    <string name="email">Email</string>
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="resend_code"><u>Resend Code</u></string>
+    <string name="not_your_change_number"><u>Not you ? change number</u></string>
+
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/chatUserSendImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="175dp"
+        android:maxHeight="300dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+
+        android:adjustViewBounds="true"
+        android:background="@drawable/chat_log_message_background"
+        android:backgroundTint="#3A704F"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="3dp"
+        android:paddingBottom="13dp"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:clickable="false"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/chatLogUserSendImageTimeStamp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:padding="1dp"
+        android:paddingEnd="0dp"
+        android:text="10:10am"
+        android:textColor="#CCCCCC"
+        android:textSize="9dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/chatUserSendImageView"
+        app:layout_constraintEnd_toEndOf="@+id/chatUserSendImageView"
+        android:elevation="2dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".2" />
+
+    <ImageView
+        android:id="@+id/imageMessageStatus"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+
+        android:elevation="5dp"
+        android:src="@drawable/sent"
+        app:layout_constraintBottom_toBottomOf="@+id/chatLogUserSendImageTimeStamp"
+        app:layout_constraintStart_toEndOf="@+id/chatLogUserSendImageTimeStamp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    android:layout_marginBottom="2dp">
+
+
+    <TextView
+        android:id="@+id/chatLogToTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_log_to_message_background"
+        android:backgroundTint="#383C37"
+        android:layout_marginStart="20dp"
+        android:autoLink="all"
+        android:textColorLink="#2EDFFF"
+
+
+        android:elevation="2dp"
+        android:maxWidth="300dp"
+        android:paddingStart="7dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="3dp"
+        android:text="dkhdcfgsdbsl          "
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeStampTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="5sp"
+        android:paddingBottom="4dp"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        android:text="10:30 pm"
+        android:textColor="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/chatLogToTextView"
+        app:layout_constraintEnd_toEndOf="@+id/chatLogToTextView"
+        android:elevation="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

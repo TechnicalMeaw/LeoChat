@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/latestMessageDefaultProfileImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/latestMessageProfileImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latestMessageUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Username"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintStart_toEndOf="@+id/latestMessageProfileImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sentMessageStatus"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:lottie_rawRes="@raw/success_sign"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintStart_toStartOf="@+id/latestMessageUsername"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageLastMessageTextView"/>
+
+
+    <TextView
+        android:id="@+id/latestMessageLastMessageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxHeight="100dp"
+        android:text="TextView"
+        android:textSize="15sp"
+        android:textColor="@color/browser_actions_title_color"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/typingIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/youTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestMessageUsername" />
+
+    <TextView
+        android:id="@+id/youTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="You: "
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintStart_toEndOf="@+id/sentMessageStatus"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageLastMessageTextView" />
+
+    <ImageView
+        android:id="@+id/latestMessageLastMessageImageIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintStart_toEndOf="@+id/youTextView"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageLastMessageTextView"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/latestMessageTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageUsername" />
+
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/unreadSign"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="4dp"
+        android:elevation="2dp"
+        app:lottie_rawRes="@raw/latest_new_message_sign_cyan_full"
+        android:tint="@color/typing_color"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintEnd_toEndOf="@+id/latestMessageTimeStamp"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageLastMessageTextView"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/typingIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:flow_verticalBias="0.5"
+        android:layout_marginEnd="6dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/latestMessageLastMessageTextView"
+        app:layout_constraintEnd_toStartOf="@+id/unreadSign"
+        app:layout_constraintTop_toTopOf="@+id/latestMessageLastMessageTextView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/typing_status" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

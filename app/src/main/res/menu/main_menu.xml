@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/newMessageBtn"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:iconTint="#88FB6F"
+        android:title="New Message"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/settingsBtn"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/logOutBtn"
+        android:title="Log out"
+        app:showAsAction="never"
+        />
+
+</menu>

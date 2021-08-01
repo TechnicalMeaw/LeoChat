@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:id="@+id/chatLogTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_log_message_background"
+        android:layout_marginEnd="20dp"
+        android:autoLink="all"
+        android:textColorLink="#2EDFFF"
+
+
+        android:backgroundTint="#3A704F"
+        android:elevation="2dp"
+        android:maxWidth="300dp"
+        android:paddingStart="7dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="3dp"
+        android:text="TextView          "
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeStampTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="5dp"
+        android:paddingBottom="4dp"
+        android:text="10:30 pm"
+        android:textSize="9sp"
+        android:textColor="#CCCCCC"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/chatLogTextView"
+        app:layout_constraintEnd_toEndOf="@+id/chatLogTextView"
+        android:elevation="2dp"/>
+
+
+    <ImageView
+        android:id="@+id/messageStatus"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="3dp"
+        android:visibility="gone"
+
+        android:elevation="5dp"
+        android:src="@drawable/sent"
+        app:layout_constraintBottom_toBottomOf="@+id/timeStampTextView"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
